@@ -1,0 +1,50 @@
+.item {
+    padding: 16px;
+    &__img {
+        padding: 16px;
+        width: 160px;
+        height: 200px;
+        border-radius: 22px;
+        background-color: #fff;
+    }
+    &__description{
+        margin-top: 8px;
+        padding: 8px;
+
+        &>*:not(:last-child) {
+            margin-bottom: 8px;
+        }
+    }
+    &__title {
+        font-size: 20px;
+    }
+    &__subtitle {
+        font-size: 16px;
+        color: $gray-color;
+    }
+    &__to-bag-wrapper {
+        padding: 8px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__price {
+        font-size: 20px;
+    }
+    &__to-bag-btn {
+        width: 34px;
+        height: 34px;
+        padding: 8px;
+        border-radius: 9px;
+        background-color: $black-color;
+
+        &:hover {
+            opacity: .7;
+        }
+
+        img {
+            height: 18px;
+            width: 18px;
+        }
+    }
+}

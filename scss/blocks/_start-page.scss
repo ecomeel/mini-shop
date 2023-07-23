@@ -1,0 +1,7 @@
+.start-page {
+    &__container {
+        display: flex;
+    }
+}
+
+@import 'start-page.products';

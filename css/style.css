@@ -59,6 +59,8 @@ button {
 
 button, input {
   font: inherit;
+  background-color: transparent;
+  border: none;
 }
 
 html, body {
@@ -66,9 +68,71 @@ html, body {
   font-size: 20px;
   font-weight: 400;
   color: #1A1F16;
+  background-color: #EDEDED;
 }
 
 .container {
   width: 1440px;
   margin: 0 auto;
+  padding-left: 100px;
+  padding-top: 48px;
+  border: 1px solid black;
+}
+
+.start-page__container {
+  display: flex;
+}
+
+.products {
+  max-width: 944px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.item {
+  padding: 16px;
+}
+.item__img {
+  padding: 16px;
+  width: 160px;
+  height: 200px;
+  border-radius: 22px;
+  background-color: #fff;
+}
+.item__description {
+  margin-top: 8px;
+  padding: 8px;
+}
+.item__description > *:not(:last-child) {
+  margin-bottom: 8px;
+}
+.item__title {
+  font-size: 20px;
+}
+.item__subtitle {
+  font-size: 16px;
+  color: #60695C;
+}
+.item__to-bag-wrapper {
+  padding: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.item__price {
+  font-size: 20px;
+}
+.item__to-bag-btn {
+  width: 34px;
+  height: 34px;
+  padding: 8px;
+  border-radius: 9px;
+  background-color: #1A1F16;
+}
+.item__to-bag-btn:hover {
+  opacity: 0.7;
+}
+.item__to-bag-btn img {
+  height: 18px;
+  width: 18px;
 }/*# sourceMappingURL=style.css.map */

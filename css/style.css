@@ -108,6 +108,7 @@ html, body {
 }
 .item__title {
   font-size: 20px;
+  max-width: 180px;
 }
 .item__subtitle {
   font-size: 16px;

@@ -1,17 +1,32 @@
 .item {
     padding: 16px;
+    max-height: 410px;
+    cursor: pointer;
+
+    &:hover {
+        .item__img {
+            background-color: rgba($color: #ac6565, $alpha: 0.3);
+        }
+        .item__description {
+            background-color: rgba($color: #a17e7e, $alpha: 0.15);
+            border-radius: 22px;
+        }
+    }
+
     &__img {
         padding: 16px;
         width: 160px;
         height: 200px;
         border-radius: 22px;
         background-color: #fff;
+        box-sizing: content-box;
+        transition: all 0.5s ease;
     }
-    &__description{
-        margin-top: 8px;
+    &__description {
         padding: 8px;
+        transition: all 0.5s ease;
 
-        &>*:not(:last-child) {
+        & > *:not(:last-child) {
             margin-bottom: 8px;
         }
     }
@@ -32,20 +47,10 @@
     &__price {
         font-size: 20px;
     }
-    &__to-bag-btn {
+    &__add-to-bag-btn {
         width: 34px;
         height: 34px;
         padding: 8px;
         border-radius: 9px;
-        background-color: $black-color;
-
-        &:hover {
-            opacity: .7;
-        }
-
-        img {
-            height: 18px;
-            width: 18px;
-        }
     }
 }

@@ -1,7 +1,11 @@
 .start-page {
+    height: 100%;
     &__container {
+        padding-bottom: 50px;
         display: flex;
     }
 }
 
-@import 'start-page.products';
+@import 'content/content';
+@import 'preview/preview';
+

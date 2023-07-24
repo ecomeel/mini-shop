@@ -64,6 +64,8 @@ button, input {
 }
 
 html, body {
+  height: 100%;
+  width: 100%;
   font-family: "Open Sans";
   font-size: 20px;
   font-weight: 400;
@@ -72,25 +74,57 @@ html, body {
 }
 
 .container {
-  width: 1440px;
+  max-width: 1440px;
   margin: 0 auto;
   padding-left: 100px;
   padding-top: 48px;
-  border: 1px solid black;
 }
 
-.start-page__container {
+.black-btn {
+  padding: 8px 24px;
+  background-color: #1A1F16;
+  border-radius: 14px;
+  color: #fff;
   display: flex;
+  column-gap: 8px;
+  align-items: center;
+}
+.black-btn:hover {
+  opacity: 0.8;
+}
+
+.start-page {
+  height: 100%;
+}
+.start-page__container {
+  padding-bottom: 50px;
+  display: flex;
+}
+
+.content {
+  max-width: 965px;
 }
 
 .products {
-  max-width: 944px;
   display: flex;
+  column-gap: 16px;
+  row-gap: 16px;
   flex-wrap: wrap;
+  border-right: 4px solid rgba(26, 31, 22, 0.5);
+  border-radius: 3px;
 }
 
 .item {
   padding: 16px;
+  max-height: 410px;
+  cursor: pointer;
+}
+.item:hover .item__img {
+  background-color: rgba(172, 101, 101, 0.3);
+}
+.item:hover .item__description {
+  background-color: rgba(161, 126, 126, 0.15);
+  border-radius: 22px;
 }
 .item__img {
   padding: 16px;
@@ -98,10 +132,12 @@ html, body {
   height: 200px;
   border-radius: 22px;
   background-color: #fff;
+  box-sizing: content-box;
+  transition: all 0.5s ease;
 }
 .item__description {
-  margin-top: 8px;
   padding: 8px;
+  transition: all 0.5s ease;
 }
 .item__description > *:not(:last-child) {
   margin-bottom: 8px;
@@ -123,17 +159,34 @@ html, body {
 .item__price {
   font-size: 20px;
 }
-.item__to-bag-btn {
+.item__add-to-bag-btn {
   width: 34px;
   height: 34px;
   padding: 8px;
   border-radius: 9px;
-  background-color: #1A1F16;
 }
-.item__to-bag-btn:hover {
-  opacity: 0.7;
+
+.about-item {
+  opacity: 0;
+  visibility: hidden;
 }
-.item__to-bag-btn img {
-  height: 18px;
-  width: 18px;
+
+.preview {
+  margin-top: 10px;
+  width: 375px;
+  padding-left: 35px;
+  padding-right: 35px;
+}
+
+.preview-bag__title {
+  margin-bottom: 10px;
+  font-size: 39px;
+  text-align: center;
+}
+.preview-bag__go-to-bag-btn {
+  margin: 16px auto;
+}
+.preview-bag__go-to-bag-btn img {
+  height: 24px;
+  width: 24px;
 }/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,19 @@
+.preview-bag {
+    &__title {
+        margin-bottom: 10px;
+        font-size: 39px;
+        text-align: center;
+    }
+    &__items {
+        
+    }
+    &__go-to-bag-btn {
+        margin: 16px auto;
+
+
+        img {
+            height: 24px; 
+            width: 24px;
+        }
+    }
+}

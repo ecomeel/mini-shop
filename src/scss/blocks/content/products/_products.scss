@@ -1,0 +1,12 @@
+.products {
+    display: flex;
+    column-gap: 16px;
+    row-gap: 16px;
+    flex-wrap: wrap;
+
+    // border-right: 4px solid rgba(26, 31, 22, 0.50);
+    // border-radius: 3px;
+
+}
+
+@import 'item';

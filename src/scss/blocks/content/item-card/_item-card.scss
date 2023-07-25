@@ -1,0 +1,57 @@
+.item-card {
+    display: none;
+    padding-left: 24px;
+    padding-right: 24px;
+    .main-info {
+        padding-bottom: 26px;
+        display: flex;
+        column-gap: 32px;
+        border-bottom: 3px solid rgba(26, 31, 22, 0.50);
+        ;
+    }
+    &__img {
+        padding: 8px;
+        background-color: #fff;
+        border-radius: 13px;
+        width: 242px;
+        height: 302px;
+    }
+    &__text-wrapper{
+        padding: 8px;
+    }
+    &__title {
+        margin-top: 8px;
+        font-size: 61px;
+        font-weight: 700;
+        line-height: normal;
+    }
+    &__sudtitle {
+        margin-top: 8px;
+        font-size: 31px;
+        color: $gray-color;
+    }
+    &__price {
+        font-size: 31px;
+    }
+    &__short-desc {
+        padding: 8px;
+    }
+    &__btn-wrapper {
+        margin-top: 16px;
+        display: flex;
+        justify-content: end;
+
+    }
+
+    &__description {
+        padding-top: 32px;
+    }
+    &__desc-title {
+        font-size: 31px;
+    }
+    &__long-desc {
+        margin-top: 8px;
+    }
+}
+
+

@@ -8,6 +8,7 @@ export class Controller {
         this.view = new View({
             openItemCard: this._handlerOpenItemCard
         });
+        
         this.storage = new Storage();
     }
 

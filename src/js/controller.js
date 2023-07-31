@@ -6,7 +6,8 @@ export class Controller {
     constructor() {
         this.model = new Model();
         this.view = new View({
-            openItemCard: this._handlerOpenItemCard
+            openItemCard: this._handlerOpenItemCard,
+            addToBag: this._handlerAddToBag
         });
         this.storage = new Storage();
     }
@@ -27,5 +28,9 @@ export class Controller {
                 this.view.renderItemCard(product)
             } 
         });
+    }
+
+    _handlerAddToBag = (name, model) => {
+        console.log(`${name} - ${model} : was added`)
     }
 }

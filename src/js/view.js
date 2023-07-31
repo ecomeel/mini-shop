@@ -1,13 +1,17 @@
 export class View {
     constructor({
-        openItemCard
+        openItemCard,
+        addToBag
     }) {
         this.productsNode = document.getElementById("products");
         this.itemCardNode = document.getElementById('itemCard'); 
+        this.addToBagFromProductsBtnNode = document.getElementById('addToBagFromProductsBtn');
 
         this.openItemCard = openItemCard;
+        this.addToBag = addToBag;
 
         this.productsNode.addEventListener('click', this._handlerItemClick);
+        // this.addToBagFromProductsBtnNode.addEventListener('click', this._handlerAddToBag)
 
     }
 
@@ -98,23 +102,21 @@ export class View {
 
     _handlerItemClick = (event) => {
         const target = event.target;
-        const li = target.closest('li')
-        const btn = target.closest('button')
-        if (!li) return
+        const productNode = target.closest('li')
+        const addToBagBtnNode = target.closest('button')
 
-        if (btn) {
-            this._handlerAddToBag()
-        } else if (li) {
-            const name = li.querySelector('.item__title').innerText;
-            const model = li.querySelector('.item__subtitle').innerText;
+        if (!productNode) return
+
+        const name = productNode.querySelector('.item__title').innerText;
+        const model = productNode.querySelector('.item__subtitle').innerText;
+
+        if (addToBagBtnNode) {
+            this.addToBag(name, model)
+        } else if (productNode) {
             this.openItemCard(name, model);
             const closeItemCardBtnNode = document.getElementById('closeItemCardBtn');
             closeItemCardBtnNode.addEventListener('click', this._handlerCloseItemCard)
         }
-    }
-
-    _handlerAddToBag = () => {
-        console.log('Product was added to bag')
     }
 
     _handlerCloseItemCard = () => {

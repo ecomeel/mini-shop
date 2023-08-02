@@ -31,6 +31,9 @@ export class Controller {
     }
 
     _handlerAddToBag = (name, model) => {
-        console.log(`${name} - ${model} : was added`)
+        console.log(`${name} - ${model} : was added`);
+        const products = 
     }
+
+    // при клике на кнопку добавления в консоль имя и модель
 }

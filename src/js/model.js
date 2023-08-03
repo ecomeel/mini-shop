@@ -19,6 +19,7 @@ export class Model {
 
     addToBag(product) {
         this.bag.push(product)
+        // количество в корзине
     }
 
 

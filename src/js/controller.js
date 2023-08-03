@@ -16,7 +16,7 @@ export class Controller {
         this.storage.pullProducts()
             .then( products => {
                 this.model.setProducts(products);
-                this.view.renderProducts(this.model.getProducts())
+                this.view.renderProducts(this.model.getProducts());
             })
 
     }
@@ -44,5 +44,5 @@ export class Controller {
 
     }
 
-    // при клике на кнопку добавления в консоль имя и модель
+    
 }

@@ -31,8 +31,17 @@ export class Controller {
     }
 
     _handlerAddToBag = (name, model) => {
-        console.log(`${name} - ${model} : was added`);
-        const products = 
+        const products = this.model.getProducts();
+        products.forEach(product => {
+            if (product.name == name && product.model == model) {
+                this.model.addToBag(product);
+                this.storage.pushBag(product);
+            }
+        });
+        // console.log(this.model.getBag())
+        
+        console.log(this.model.getBag())
+
     }
 
     // при клике на кнопку добавления в консоль имя и модель

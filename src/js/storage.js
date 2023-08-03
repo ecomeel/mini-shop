@@ -1,5 +1,5 @@
 import { initializeApp } from "firebase/app";
-import { getFirestore, collection, getDocs } from "firebase/firestore/lite";
+import {getFirestore, collection, getDocs, addDoc } from "firebase/firestore/lite";
 
 export class Storage {
     constructor() {
@@ -30,5 +30,14 @@ export class Storage {
             })
         });
         return products;
+    }
+
+    async pushBag(product) {
+        try {
+            const docRef = await addDoc(collection(this.db, 'bag'), product);
+            // console.log("Document written with ID: ", docRef.id);
+          } catch (e) {
+            console.error("Error adding document: ", e);
+          }
     }
 }

@@ -9,7 +9,17 @@ export class Model {
         return this.products;
     }
 
+    getBag() {
+        return this.bag;
+    }
+
     setProducts(products) {
         this.products = products
     }
+
+    addToBag(product) {
+        this.bag.push(product)
+    }
+
+
 }
